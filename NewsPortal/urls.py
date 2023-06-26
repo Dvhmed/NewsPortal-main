@@ -29,4 +29,5 @@ urlpatterns = [
     path('article/create/', views.ArticleCreate.as_view(), name='article_create'),
     path('article/<int:pk>/edit', views.ArticleUpdate.as_view(), name='article_update'),
     path('article/<int:pk>/delete', views.ArticleDelete.as_view(), name='article_delete'),
+    path("accounts/", include("allauth.urls")),
 ]
